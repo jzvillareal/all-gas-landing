@@ -1,2 +1,3 @@
-# all-gas-landing
-random project
+RANDOM PROJECT
+
+landing page for discord
