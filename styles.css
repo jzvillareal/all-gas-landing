@@ -11,18 +11,26 @@
     padding: 0;
     box-sizing: border-box;
     line-height: 1.5;
+    scroll-behavior: smooth;
 }
 body {
     background: black;
     color: white;
+    font-family: 'Times New Roman', Times, serif;
     max-width: 1110px;
     margin-inline: auto;
     cursor: default;
+    padding-inline: 20px;
 }
 
 /* navbar */
 .navbar {
-    height: 70px;
+    height: 60px;
+    position: fixed;
+    top: 0;
+    width: 1110px;
+    background: black;
+    z-index: 1;
 }
 .navbar .container {
     display: flex;
@@ -45,7 +53,6 @@ li {
 a {
     text-decoration: none;
     color: white;
-    font-family: 'Times New Roman', Times, serif;
 }
 
 /* hero section */
@@ -57,8 +64,8 @@ a {
 }
 .hero .container {
     position: relative;
-    width: 600px;
-    height: 350px;
+    width: 700px;
+    height: 400px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -68,20 +75,20 @@ a {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: white;
+    background-image: url("img/adrianna-geo-1rBg5YSi00c-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
     clip-path: circle(170px at center);
-    transition: .5s;
+    transition: 1s;
 }
 .hero .container:hover .circle {
-    clip-path: circle(400px at center);
-    background: orange;
+    clip-path: circle(500px at center);
 }
 .hero .headline {
     position: absolute;
-    color: pink;
     pointer-events: none;
-    transition: .3s;
-    color: orange;
+    transition: 1s ease-out;
+    color: rgb(251, 198, 129);
     font-size: 150px;
     width: 1000px;
     font-family: Canvas;
@@ -97,7 +104,7 @@ a {
     position: relative;
     display: block;
     text-align: center;
-    transition: .1s ease-in .1s;
+    transition: .5s ease-in .1s;
     opacity: 0;
     visibility: hidden;
 }
@@ -108,11 +115,12 @@ a {
 .hero .content h2 {
     font-family: Ballpark;
     font-size: 100px;
+    border-bottom: white thin solid;
+    height: 120px;
 }
 .hero .content p {
-    font-family: 'Times New Roman', Times, serif;
+    padding-top: 10px;
 }
-
 .hero .container .btn {
     display: inline-block;
     text-align: center;
@@ -120,10 +128,96 @@ a {
     padding: 3px 30px;
     margin-top: 10px;
     border-radius: 20px;
-    background: rgb(106, 79, 28);
+    background: orange;
 }
 .hero .container .btn:hover {
     cursor: pointer;
     background: #7289d9;
-    
+    scale: 1.2;
+}
+
+/* arrow down */
+.arrow {
+    margin-top: -130px;
+    margin-bottom: 150px;
+    display: block;
+    text-align: center;
+}
+.arrow img {
+    transition: .3s;
+}
+.arrow img:hover {
+    scale: 1.4;
+    cursor: pointer;
+}
+
+/* cards */
+.cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.cards .container {
+    display: block;
+    text-align: center;
+    padding-inline: 20px;
+    padding-top: 25%;
+    height: 600px;
+    width: 370px;
+    transition: 1s;
+    border: black thin solid;
+    opacity: 70%;
+}
+.cards .container h3 {
+    font-family: Canvas;
+    font-size: 50px;
+    transition: 1.2s;
+}
+.cards .container p {
+    font-size: 20px;
+    opacity: 0%;
+    transition: 1.2s;
+}
+.cards .container.one {
+    background-image: url("img/martin-de-arriba-Ro4u_Y86Kx4-unsplash.jpg");
+    background-size: cover;
+    background-position: left;
+}
+.cards .container.two {
+    background-image: url("img/austin-kehmeier-554CrnbNQWg-unsplash.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.cards .container.three {
+    background-image: url("img/jack-hamilton-AUgTvvQxDhg-unsplash.jpg");
+    background-size: cover;
+    background-position: right;
+}
+.cards .container:hover {
+    width: 600px;
+    opacity: 100%;
+    padding-top: 10%;
+}
+.cards .container:hover p {
+    opacity: 100%;
+}
+.cards .container:hover h3 {
+    scale: 1.6;
+    color: orange;
+}
+.statement {
+    display: block;
+    text-align: center;
+    margin-top: -130px;
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.557);
+}
+.statement a {
+    font-family: Canvas;
+    color: white;
+    transition: .2s;
+}
+.statement a:hover {
+    color: orange;
 }
