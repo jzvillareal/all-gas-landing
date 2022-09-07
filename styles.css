@@ -17,26 +17,24 @@ body {
     background: black;
     color: white;
     font-family: 'Times New Roman', Times, serif;
-    max-width: 1110px;
+    max-width: 1100px;
     margin-inline: auto;
     cursor: default;
-    padding-inline: 20px;
 }
 
 /* navbar */
-.navbar {
-    height: 60px;
+.navbar .container {
     position: fixed;
     top: 0;
-    width: 1110px;
-    background: black;
-    z-index: 1;
-}
-.navbar .container {
+    left: 0;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 100%;
+    background: black;
+    padding: 10px;
+    padding-inline: 15%;
+    z-index: 10000;
 }
 .navbar .logo {
     font-family: Ballpark;
@@ -53,14 +51,17 @@ li {
 a {
     text-decoration: none;
     color: white;
+    transition: .3s;
 }
-
+.navbar a:hover {
+    color: orange;
+}
 /* hero section */
 .hero {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 90vh;
+    min-height: 100vh;
 }
 .hero .container {
     position: relative;
@@ -120,8 +121,11 @@ a {
 }
 .hero .content p {
     padding-top: 10px;
+    padding-bottom: 20px;
 }
-.hero .container .btn {
+
+/* discord button */
+.container .btn {
     display: inline-block;
     text-align: center;
     transition: .3s;
@@ -130,7 +134,7 @@ a {
     border-radius: 20px;
     background: orange;
 }
-.hero .container .btn:hover {
+.container .btn:hover {
     cursor: pointer;
     background: #7289d9;
     scale: 1.2;
@@ -138,8 +142,7 @@ a {
 
 /* arrow down */
 .arrow {
-    margin-top: -130px;
-    margin-bottom: 150px;
+    margin-top: -100px;
     display: block;
     text-align: center;
 }
@@ -147,7 +150,7 @@ a {
     transition: .3s;
 }
 .arrow img:hover {
-    scale: 1.4;
+    scale: 1.2;
     cursor: pointer;
 }
 
@@ -172,12 +175,12 @@ a {
 .cards .container h3 {
     font-family: Canvas;
     font-size: 50px;
-    transition: 1.2s;
+    transition: 1s ease-in-out;
 }
 .cards .container p {
     font-size: 20px;
     opacity: 0%;
-    transition: 1.2s;
+    transition: .8s ease-out;
 }
 .cards .container.one {
     background-image: url("img/martin-de-arriba-Ro4u_Y86Kx4-unsplash.jpg");
@@ -194,8 +197,19 @@ a {
     background-size: cover;
     background-position: right;
 }
+.card-arrow {
+    position: relative;
+    top: 6px;
+    left: 3px;
+}
+.cards img {
+    transition: .3s;
+}
+.cards .container a:hover img {
+    scale: 1.2;
+}
 .cards .container:hover {
-    width: 600px;
+    width: 500px;
     opacity: 100%;
     padding-top: 10%;
 }
@@ -203,7 +217,7 @@ a {
     opacity: 100%;
 }
 .cards .container:hover h3 {
-    scale: 1.6;
+    scale: 1.3;
     color: orange;
 }
 .statement {
@@ -220,4 +234,31 @@ a {
 }
 .statement a:hover {
     color: orange;
+}
+
+/* join */
+.join {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background-image: url("img/statue\(2\).png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 1100px 800px;
+}
+.join .content {
+    display: block;
+    text-align: center;
+}
+.join h2 {
+    letter-spacing: 1px;
+    font-size: 30px;
+}
+.join span {
+    font-family: Ballpark;
+    letter-spacing: 2px;
+    font-size: 50px;
+    color: rgb(251, 198, 129);
 }
