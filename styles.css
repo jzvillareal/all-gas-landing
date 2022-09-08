@@ -148,18 +148,35 @@ a {
 }
 .arrow img {
     transition: .3s;
+    opacity: 50%;
 }
 .arrow img:hover {
     scale: 1.2;
     cursor: pointer;
+    opacity: 100%;
 }
 
 /* cards */
+.about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
 .cards {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+}
+.about .header {
+    display: block;
+    text-align: center;
+    padding-bottom: 20px;
+    font-size: 20px;
+}
+.about span {
+    color: rgb(251, 198, 129);
 }
 .cards .container {
     display: block;
@@ -236,6 +253,60 @@ a {
     color: orange;
 }
 
+/* about-2 */
+.about-2 {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.about-2 .container {
+    position: absolute;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+    width: 100%;
+    background: rgb(238, 247, 255);
+}
+.about-2 img {
+    scale: .8;
+}
+
+.about-2 p {
+    color: black;
+    font-size: 20px;
+    text-align: center;
+    margin-top: -30px;
+    max-width: 900px;
+}
+
+/* about-3 */
+.about-3 {
+    height: 100vh;
+    width: 100%;
+}
+.about-3 .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: inherit;
+    gap: 100px;
+}
+.about-3 h2 {
+    color: rgb(251, 198, 129);
+    font-family: Canvas;
+    font-size: 50px;
+    line-height: 1.1;
+}
+.about-3 img {
+    height: 600px;
+    width: 400px;
+}
+
 /* join */
 .join {
     display: flex;
@@ -247,6 +318,7 @@ a {
     background-repeat: no-repeat;
     background-position: center;
     background-size: 1100px 800px;
+    margin-top: 50px;
 }
 .join .content {
     display: block;
@@ -254,11 +326,18 @@ a {
 }
 .join h2 {
     letter-spacing: 1px;
-    font-size: 30px;
+    line-height: .3;
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+    border-bottom: white thin solid;
+    margin-bottom: 30px;
 }
 .join span {
+    position: relative;
+    top: 5px;
     font-family: Ballpark;
     letter-spacing: 2px;
-    font-size: 50px;
+    font-size: 40px;
     color: rgb(251, 198, 129);
 }
+
