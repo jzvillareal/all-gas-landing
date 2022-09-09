@@ -6,6 +6,10 @@
     font-family: 'Ballpark';
     src: url(fonts/BALLW___.TTF);
 }
+@font-face {
+    font-family: 'Norse';
+    src: url(fonts/Norse-Bold.otf);
+}
 * {
     margin: 0;
     padding: 0;
@@ -43,7 +47,7 @@ body {
 }
 .nav-main ul {
     display: flex;
-    gap: 20px;
+    gap: 5px;
 }
 li {
     list-style: none;
@@ -55,6 +59,18 @@ a {
 }
 .navbar a:hover {
     color: orange;
+}
+.navbar img {
+    scale: .8;
+    position: relative;
+    top: 6px;
+    opacity: 0%;
+    visibility: hidden;
+    transition: .5s;
+}
+.navbar a:hover img {
+    opacity: 100%;
+    visibility: visible;
 }
 /* hero section */
 .hero {
@@ -164,19 +180,22 @@ a {
     align-items: center;
     min-height: 100vh;
 }
-.cards {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 .about .header {
     display: block;
     text-align: center;
     padding-bottom: 20px;
     font-size: 20px;
+    opacity: 80%;
 }
 .about span {
-    color: rgb(251, 198, 129);
+    color: orange;
+    font-family: Canvas;
+}
+.cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1100px;
 }
 .cards .container {
     display: block;
@@ -274,8 +293,11 @@ a {
 }
 .about-2 img {
     scale: .8;
+    transition: .8s;
 }
-
+.about-2 .container:hover img {
+    scale: .83;
+}
 .about-2 p {
     color: black;
     font-size: 20px;
@@ -296,15 +318,31 @@ a {
     height: inherit;
     gap: 100px;
 }
+.about-3 .words {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+.words a:hover {
+    color: orange;
+}
 .about-3 h2 {
     color: rgb(251, 198, 129);
     font-family: Canvas;
-    font-size: 50px;
-    line-height: 1.1;
+    font-size: 60px;
+    line-height: 1;
 }
-.about-3 img {
+.about-3 .container img {
     height: 600px;
     width: 400px;
+}
+.about-3 .container .words img {
+    position: relative;
+    top: 3px;
+    left: 3px;
+    height: 15px;
+    width: 15px;
 }
 
 /* join */
@@ -319,6 +357,7 @@ a {
     background-position: center;
     background-size: 1100px 800px;
     margin-top: 50px;
+    margin-bottom: -60px;
 }
 .join .content {
     display: block;
@@ -330,7 +369,10 @@ a {
     font-size: 25px;
     font-family: 'Times New Roman', Times, serif;
     border-bottom: white thin solid;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
+}
+.join p {
+    padding-bottom: 20px;
 }
 .join span {
     position: relative;
@@ -341,3 +383,26 @@ a {
     color: rgb(251, 198, 129);
 }
 
+/* footer */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+footer img {
+    height: 22px;
+    width: 24px;
+    opacity: 50%;
+    transition: .3s;
+}
+footer img:hover {
+    opacity: 100%;
+    cursor: pointer;
+    scale: 1.1;
+}
