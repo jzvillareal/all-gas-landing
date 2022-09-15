@@ -72,6 +72,7 @@ a {
     opacity: 100%;
     visibility: visible;
 }
+
 /* hero section */
 .hero {
     display: flex;
@@ -81,8 +82,8 @@ a {
 }
 .hero .container {
     position: relative;
-    width: 700px;
-    height: 400px;
+    width: 800px;
+    height: 450px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -95,7 +96,7 @@ a {
     background-image: url("img/adrianna-geo-1rBg5YSi00c-unsplash.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    clip-path: circle(170px at center);
+    clip-path: circle(200px at center);
     transition: 1s;
 }
 .hero .container:hover .circle {
@@ -106,7 +107,7 @@ a {
     pointer-events: none;
     transition: 1s ease-out;
     color: rgb(251, 198, 129);
-    font-size: 150px;
+    font-size: 170px;
     width: 1000px;
     font-family: Canvas;
     text-align: center;
@@ -131,9 +132,9 @@ a {
 } 
 .hero .content h2 {
     font-family: Ballpark;
-    font-size: 100px;
+    font-size: 140px;
     border-bottom: white thin solid;
-    height: 120px;
+    height: 160px;
 }
 .hero .content p {
     padding-top: 10px;
@@ -371,6 +372,18 @@ a {
     border-bottom: white thin solid;
     margin-bottom: 10px;
 }
+.join h2 .left {
+    scale: 1.1;
+    position: relative;
+    right: 10px;
+    bottom: 2px;
+}
+.join h2 .right {
+    scale: 1.1;
+    position: relative;
+    left: 10px;
+    bottom: 2px;
+}
 .join p {
     padding-bottom: 20px;
 }
@@ -402,6 +415,32 @@ footer img {
     transition: .3s;
 }
 footer img:hover {
+    opacity: 100%;
+    cursor: pointer;
+    scale: 1.1;
+}
+footer .logo {
+    font-family: Ballpark;
+    position: relative;
+    font-size: 20px;
+    top: 2px;
+    opacity: 50%;
+    transition: .3s;
+}
+footer .top {
+    font-family: Norse;
+    position: relative;
+    font-size: 23px;
+    top: 3px;
+    opacity: 50%;
+    transition: .3s;
+}
+footer .logo:hover {
+    opacity: 100%;
+    cursor: pointer;
+    scale: 1.1;
+}
+footer .top:hover {
     opacity: 100%;
     cursor: pointer;
     scale: 1.1;
